@@ -1,0 +1,65 @@
+:root {
+  --Pokefont: 'Pokemon Solid', sans-serif;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  --pokeyellow:rgb(199, 160, 8);
+  --pokelogo:rgb(60, 90, 166);
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  /* background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  background-color:#313131f3;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  background-color:#313131fa;
+  margin: 0;
+  display: flex;
+  place-items:center;
+  min-width: 90vw;
+  min-height: 100vh;
+  /* background-image: url("/src/assets/backgrounds/back.gif");
+  background-size: contain; */
+}
+
+h1 {
+  font-size: 7.2em;
+  line-height: 1.1;
+  font-family:var(--Pokefont);
+  color: yellow;
+  /* color: var(--pokeyellow); */
+  text-shadow: -10px 0 var(--pokelogo), 0 10px var(--pokelogo), 5px 0 var(--pokelogo), 0 -5px var(--pokelogo);
+}
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+

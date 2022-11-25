@@ -1,0 +1,108 @@
+:root{
+    --grass:#9bcc50;
+    --fire:#fd7d24;
+    --water:#4592c4;
+    --normal:#a4acaf;
+    --poison:#b97fc9;
+    --bug:#729f3f;
+    --eletric:#eed535;
+    --ground:linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+    --groundb:#f7de3f;
+    --fairy:#fdb9e9;
+    --fighting: #d56723;
+    --psychic:#f366b9;
+    --rock:#a38c21;
+    --ghost:#7b62a3;
+    --ice:#51c4e7;
+    --dragon:linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+    --dragonb:#53a4cf;
+    --dark:#707070;
+    --steel:#9eb7b8;
+    --flying:linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+    --flyingb:#3dc7ef;
+    --pokeyellow:rgb(199, 160, 8);
+    --pokelogo:rgb(60, 90, 166);
+
+    }
+
+    .pokethumb{
+        /* border:2px solid blue; */
+        margin-top: 10px;
+        border-bottom: 1px solid black;
+        box-sizing: border-box;
+        /* background-color: white; */
+    }
+
+    .pokethumb img{
+        height: 170px;
+        width: 170px;
+        
+    }
+
+    .category{
+        margin-top: 7px;
+        width: 120px;
+        height: 30px;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:var(--grass);
+        color: white;
+    }
+    .nameWrap{
+        font-family: 'Exo', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+        box-sizing: border-box;
+        width: 95%;
+        background-color:white;
+        padding: 4px;
+        /* border: 1px solid #242424; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+        box-sizing: border-box;
+        margin-top: 4px;
+    }
+
+    .card{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        width: 220px;
+        height: 300px;
+        border-radius: 15px;
+        background-color:#e4e3e3;
+        /* border: 1px solid #242424; */
+        padding: 5px;
+        margin:15px;
+        margin-bottom: 25px;
+        box-sizing: border-box;
+        transition: box-shadow 0.25s;
+    }
+
+    .card:hover{
+        cursor:pointer;
+        box-shadow: 4px 8px 8px -4px var(--pokelogo);
+        transform: scale(1.01);
+    }
+    .card:active{
+        transform: translateY(2px);
+    }
+
+    .id{
+        background-color:#313131f3;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+        border-radius: 50%;
+    }
