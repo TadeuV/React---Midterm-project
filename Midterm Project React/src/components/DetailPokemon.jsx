@@ -31,10 +31,11 @@ export default function DetailPokemon () {
 
         Axios.get(`https://pokeapi.co/api/v2/pokemon/${j}`).then((each)=>(setPokeinfo(each.data)));
 
-        // (Object.keys(pokeinfo).length) > 0 ? (console.log(pokeinfo.types[1])):console.log("empty") 
+        
+        // (Object.keys(pokeinfo).length) > 0 ? (console.log(pokeinfo)):console.log("empty") 
     }
     function progressbarloader(stat) {
-        return (stat/3+`%`)
+        return (stat/2+`%`)
     }
 
     function sequencecard(ind){
@@ -45,10 +46,9 @@ export default function DetailPokemon () {
         }else{
             setPokesequence(ind)
         }
-
+      
     }
 
-    
 
 function switchcolor(category){
     switch (category) {
@@ -165,9 +165,9 @@ function switchcolor(category){
 
                 {(Object.keys(pokeinfo).length) > 0 ? (
                 <div className="infocontainer">
-                    <div className="title">{`${padLeft(pokesequence,3)} - ${firstLetter(pokeinfo.species.name)}`}</div>
+                    <div className="title">{`${padLeft(pokeinfo.id,3)} - ${firstLetter(pokeinfo.species.name)}`}</div>
                     <div className="pokepic">
-                        <img src={`/src/assets/pokepics/${padLeft(pokesequence,3)}-${firstLetter(pokeinfo.species.name)}.png`} alt={pokeinfo.species.name}/>
+                        <img src={`/pokepics/${padLeft(pokeinfo.id,3)}-${firstLetter(pokeinfo.species.name)}.png`} alt={pokeinfo.species.name}/>
                         <div className="typeswrap">
                             <div className="type" style={switchcolor(pokeinfo.types[0].type.name)}>{firstLetter(pokeinfo.types[0].type.name)}</div>
                             {(pokeinfo.types[1]) != undefined ? (<div className="type" style={switchcolor(pokeinfo.types[1].type.name)}>{firstLetter(pokeinfo.types[1].type.name)}</div>):""}

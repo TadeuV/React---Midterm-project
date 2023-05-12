@@ -14,6 +14,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        /* border: 2px solid blue; */
     }
 
     .pokepic img{
@@ -67,13 +68,14 @@
     }
 
     .detailwrapper{
-        background-image: url("/src/assets/backgrounds/pokewall.jpg");
+        background-image: url("backgrounds/pokewall.jpg");
         background-size: cover;
-        width: 95vw;
+        width: 100%;
         height: 85vh;
         display: flex;
         justify-content: center;
         box-sizing: border-box;
+        
     }
 
     .backgroundInfo{
@@ -86,6 +88,7 @@
         justify-content: space-between;
         place-self: center;
         box-sizing: border-box;
+        
     }
 
     .cardsbuttons{
@@ -105,8 +108,10 @@
         height: 100%;
         width: 50%;
         color: white;
+
         border: 2px double white;
         border-radius: 5px;
+        cursor: pointer;
     }
     .direcbutton:active{
         background-color: rgb(30, 33, 73);
@@ -294,9 +299,7 @@
             grid-template-columns: 250px 1fr;
            
         }
-        .infobox{
-            align-items: flex-end;
-        }
+ 
         .bar{
             width: 65%;
         }
@@ -304,7 +307,7 @@
       }
     @media screen and (max-width:1020px) {
         .backgroundInfo{
-            width: 80vw;
+            width: 70vw;
             height: 130vh;
         }
         .pokepic{
@@ -326,14 +329,12 @@
             "info info";
             justify-content: center;
         }
-        .infobox{
-            align-items: flex-end;
-        }
+
         .bar{
             width: 75%;
         }
         .detailwrapper{
-            height: 145vh;
+            height: 150vh;
         }
         .battleinfo{
             width: 100%;
@@ -365,17 +366,103 @@
       }
     @media screen and (max-width:680px) {
         .statstitle{
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
-      
-        /* .type{
-            width: 100px;
-        } */
+        
+        .title{
+           
+            width: 100%;
+            height: 80%;
+            font-size: 2rem;
+            /* border: 2px solid blue; */
+        }
         .bar{
-            width: 65%;
+            width: 60%;
+            height: 20px;
         }
         .detailwrapper{
-            height: 145vh;
+            height: 120vh;
+            
+        }
+        .stats{
+            font-size: 1rem;
+        }
+
+        .pokepic img{
+            
+            height: 280px;
+            width: 280px;
+        }
+
+
+        .backgroundInfo{
+            width: 70vw;
+            height: 100vh;
+            /* border: 2px solid blue; */
+        }
+
+        .battleinfo{
+             width: 100%;
+             height: 65%;
+            
+        }
+
+        .bartitle{
+            font-size: .9rem; 
+            padding: 0 14px;
+        }
+
+        .cardsbuttons{
+         
+             height: 60px;  
+        }
+
+        .infocontainer{
+            box-sizing: border-box;
+            padding: 10px 30px;
+            grid-template-rows: 50px 2fr 2fr;
         }
        
       }
+    @media screen and (max-width:540px) {
+        .bar{
+            width: 50%;
+            height: 20px;
+        }
+        .title{
+            font-size: 1.8rem;
+        }
+        .type{
+            width: 110px;
+            font-size: 1rem;
+        }
+   
+        .stats{
+            font-size: 0.9rem;
+        }
+
+        .pokepic img{
+            
+            height: 240px;
+            width: 240px;
+        }
+
+        .generalinfo{
+   
+            height: 25%;
+            justify-content: space-evenly;
+ 
+        }
+        .infocontainer{
+            box-sizing: border-box;
+            padding: 10px 30px;
+            grid-template-rows: 50px 300px 1fr;
+        }
+        .backgroundInfo{
+            height: 90vh;
+        }
+        .detailwrapper{
+            height: 100vh; 
+        }
+       
+    }

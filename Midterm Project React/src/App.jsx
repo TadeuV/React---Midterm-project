@@ -9,13 +9,13 @@ import DetailPokemon from './components/DetailPokemon';
 const API_ALL= "https://pokeapi.co/api/v2/pokemon?limit=1154";
 const API_PAG= "https://pokeapi.co/api/v2/pokemon?limit=24";
 
-let counter=24;
+let counter=30;
 
 function App() {
   const [pokelist, setPokelist] = useState([])
   const [loaderdisplay, setloaderdisplay] = useState({display:""})
 
-const fetchPokedex = (j=24) =>{
+const fetchPokedex = (j=30) =>{
   let pokeUrlarray=[];
 
   for (let i=1; i<=j;i++){
@@ -31,7 +31,7 @@ const fetchPokedex = (j=24) =>{
     let filteredPokemon = [];
     // console.log(isNaN(+input));
     if(input===""){
-      fetchPokedex(48)
+      fetchPokedex(60)
       setloaderdisplay({display:"block"})
     }else if (isNaN(+input) ==false){
       input=+input;
@@ -51,7 +51,7 @@ const fetchPokedex = (j=24) =>{
 
 
   function pokeloader (){
-    counter=counter+24;
+    counter=counter+30;
     
     if(counter >=905){
       counter=905;
@@ -64,7 +64,7 @@ const fetchPokedex = (j=24) =>{
     fetchPokedex(905)
   }
 
-
+  //  (pokelist != undefined ? (console.log(pokelist[3].data)):"nothing")
 
   useEffect(() =>{
     // const abortCont=new AbortController();
@@ -76,11 +76,11 @@ const fetchPokedex = (j=24) =>{
   return (
       <Router>
         <div className="App">
-          <h1>Pokédex</h1>
+          <h1 className='ptitle'>Pokébook</h1>
           <div className='searchBar'>
             <div className="searchWrapper">
               <input className='search' type="input" placeholder='Search for your pokémon by index or name' onChange={(e)=>{pokeSearch(e.target.value)}}></input>
-              <img src="./src/assets/searchbar/magnifying.svg" alt="search" onClick={()=>{}}></img>
+              <img src="/magnifying.svg" alt="search" onClick={()=>{}}></img>
             </div>
             <div className='navbuttons'>
               <div className='navstyling'></div>

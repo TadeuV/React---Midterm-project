@@ -39,17 +39,40 @@
         
     }
 
+    .typeWrapper{
+        /* border:2px solid blue; */
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        box-sizing: border-box;
+        padding-bottom: 3px;
+    }
+
     .category{
         margin-top: 7px;
-        width: 120px;
+        width: 70px;
         height: 30px;
-        font-size: 1.2rem;
+        font-size: 1rem;
         border-radius: 5px;
         font-weight: 500;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color:var(--grass);
+        color: white;
+        
+    }
+    .category2{
+        margin-top: 7px;
+        width: 70px;
+        height: 30px;
+        font-size: 1rem;
+        border-radius: 5px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color:var(--grass); */
         color: white;
     }
     .nameWrap{

@@ -30,11 +30,13 @@ a:hover {
 
 body {
   background-color:#313131fa;
+  /* background-color:white; */
   margin: 0;
   display: flex;
   place-items:center;
   min-width: 90vw;
   min-height: 100vh;
+  
   /* background-image: url("/src/assets/backgrounds/back.gif");
   background-size: contain; */
 }
@@ -46,6 +48,7 @@ h1 {
   color: yellow;
   /* color: var(--pokeyellow); */
   text-shadow: -10px 0 var(--pokelogo), 0 10px var(--pokelogo), 5px 0 var(--pokelogo), 0 -5px var(--pokelogo);
+ 
 }
 
 
