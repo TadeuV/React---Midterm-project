@@ -68,7 +68,7 @@
     }
 
     .detailwrapper{
-        background-image: url("backgrounds/pokewall.jpg");
+        background-image: url("/backgrounds/pokewall.jpg");
         background-size: cover;
         width: 100%;
         height: 85vh;
